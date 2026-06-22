@@ -8,7 +8,7 @@ import ProjectVisual from "./project-visual";
 export default function ProjectSection() {
   return (
     <section
-      className="bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08),transparent_70%)] py-10 sm:py-20"
+      className="bg-[radial-gradient(circle_at_center,rgba(var(--theme-accent-rgb),0.08),transparent_70%)] py-10 sm:py-20"
       id="projects"
     >
       <div className={container}>
@@ -25,11 +25,11 @@ export default function ProjectSection() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className={`${glassCard} group relative isolate overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(239,68,68,0.12)] max-lg:mx-auto max-lg:max-w-[760px]`}
+              className={`${glassCard} group relative isolate overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(var(--theme-accent-rgb),0.12)] max-lg:mx-auto max-lg:max-w-[760px]`}
             >
               {/* Glitch overlay */}
               <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="absolute inset-0 animate-[glitchShift_0.35s_steps(2,end)_infinite] bg-[linear-gradient(90deg,transparent,rgba(239,68,68,0.11),transparent)] mix-blend-screen" />
+                <div className="absolute inset-0 animate-[glitchShift_0.35s_steps(2,end)_infinite] bg-[linear-gradient(90deg,transparent,rgba(var(--theme-accent-rgb),0.11),transparent)] mix-blend-screen" />
               </div>
 
               {/* Scan lines */}
@@ -38,7 +38,7 @@ export default function ProjectSection() {
               </div>
 
               {/* Moving scanner */}
-              <div className="pointer-events-none absolute -top-1/2 left-0 z-0 h-1/2 w-full animate-[scanLine_5s_linear_infinite] bg-[linear-gradient(to_bottom,transparent,rgba(239,68,68,0.07),transparent)]" />
+              <div className="pointer-events-none absolute -top-1/2 left-0 z-0 h-1/2 w-full animate-[scanLine_5s_linear_infinite] bg-[linear-gradient(to_bottom,transparent,rgba(var(--theme-accent-rgb),0.07),transparent)]" />
 
               <div className="relative z-10">
                 <ProjectVisual title={project.title} visual={project.visual} />
@@ -62,7 +62,7 @@ export default function ProjectSection() {
                       <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                         Problem
                       </h4>
-                      <p className="m-0 text-xs leading-[1.65] text-zinc-400">
+                      <p className="m-0 text-xs leading-[1.65] text-zinc-500 data-[theme=light]:text-zinc-800">
                         {project.problem}
                       </p>
                     </div>
@@ -71,7 +71,7 @@ export default function ProjectSection() {
                       <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                         Solution
                       </h4>
-                      <p className="m-0 text-xs leading-[1.65] text-zinc-400">
+                      <p className="m-0 text-xs leading-[1.65] text-zinc-500 data-[theme=light]:text-zinc-800">
                         {project.solution}
                       </p>
                     </div>
@@ -91,7 +91,7 @@ export default function ProjectSection() {
                     Key features
                   </h4>
 
-                  <ul className="m-0 grid list-none grid-cols-2 gap-2 p-0 max-sm:grid-cols-1 [&>li]:flex [&>li]:items-center [&>li]:gap-1.5 [&>li]:text-xs [&>li]:text-zinc-400 [&_svg]:text-red-500">
+                  <ul className="m-0 grid list-none grid-cols-2 gap-2 p-0 max-sm:grid-cols-1 [&>li]:flex [&>li]:items-center [&>li]:gap-1.5 [&>li]:text-xs [&>li]:text-zinc-500 data-[theme=light]:text-zinc-800 [&_svg]:text-red-500">
                     {project.features.map((item) => (
                       <li key={item}>
                         <Check size={13} />

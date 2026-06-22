@@ -28,7 +28,7 @@ export default function HeroSection() {
             <i />
             Philippines · Remote
           </p>
-          <h1 className="my-6 max-w-[760px] text-[clamp(42px,13vw,62px)] font-semibold leading-[0.97] tracking-[-0.062em] sm:my-7 sm:text-[clamp(48px,5.5vw,76px)] [&>em]:font-normal [&>em]:not-italic [&>em]:text-zinc-400">
+          <h1 className="my-6 max-w-[760px] text-[clamp(42px,13vw,62px)] font-semibold leading-[0.97] tracking-[-0.062em] sm:my-7 sm:text-[clamp(48px,5.5vw,76px)] [&>em]:font-normal [&>em]:not-italic [&>em]:text-zinc-500 data-[theme=light]:text-zinc-800">
             <span
               className="glitch-title"
               data-text="Building scalable business systems and"
@@ -37,7 +37,7 @@ export default function HeroSection() {
             </span>{" "}
             <em>dependable software products.</em>
           </h1>
-          <p className="m-0 max-w-[650px] text-[17px] leading-[1.75] text-zinc-400 max-sm:text-[15px]">
+          <p className="m-0 max-w-[650px] text-[17px] leading-[1.75] text-zinc-500 data-[theme=light]:text-zinc-800 max-sm:text-[15px]">
             Senior Laravel &amp; Full-Stack Engineer with 8+ years of experience
             building APIs, CRM platforms, e-commerce systems, and developer
             tools.
@@ -71,7 +71,7 @@ export default function HeroSection() {
               <i />
               <i />
             </div>
-            <span className="font-mono text-[14px] text-zinc-400">
+            <span className="font-mono text-[14px] text-zinc-300">
               developer.ts
             </span>
           </div>

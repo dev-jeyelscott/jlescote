@@ -23,7 +23,7 @@ export default function Heading({
           {title}
         </h2>
         {copy && (
-          <p className="mt-5.5 mb-0 max-w-[620px] text-[15px] leading-7 text-zinc-400">
+          <p className="mt-5.5 mb-0 max-w-[620px] text-[15px] leading-7 text-zinc-500 data-[theme=light]:text-zinc-800">
             {copy}
           </p>
         )}

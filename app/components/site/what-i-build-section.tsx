@@ -16,18 +16,18 @@ export default function WhatIBuildSection() {
           {capabilities.map(([title, Icon, copy]) => (
             <article
               key={title}
-              className={`${glassCard} group relative isolate overflow-hidden rounded-[10px] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(239,68,68,0.12)]`}
+              className={`${glassCard} group relative isolate overflow-hidden rounded-[10px] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(var(--theme-accent-rgb),0.12)]`}
             >
               {/* Glitch overlay */}
               <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="absolute inset-0 animate-[glitchShift_0.35s_steps(2,end)_infinite] bg-[linear-gradient(90deg,transparent,rgba(239,68,68,0.12),transparent)] mix-blend-screen" />
+                <div className="absolute inset-0 animate-[glitchShift_0.35s_steps(2,end)_infinite] bg-[linear-gradient(90deg,transparent,rgba(var(--theme-accent-rgb),0.12),transparent)] mix-blend-screen" />
               </div>
               {/* Scan lines */}
               <div className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="absolute inset-0 bg-[repeating-linear-gradient(180deg,transparent_0px,transparent_3px,rgba(255,255,255,0.03)_4px,transparent_5px)]" />
               </div>
               {/* Moving scanner */}
-              <div className="pointer-events-none absolute -top-1/2 left-0 z-0 h-1/2 w-full animate-[scanLine_5s_linear_infinite] bg-[linear-gradient(to_bottom,transparent,rgba(239,68,68,0.07),transparent)]" />
+              <div className="pointer-events-none absolute -top-1/2 left-0 z-0 h-1/2 w-full animate-[scanLine_5s_linear_infinite] bg-[linear-gradient(to_bottom,transparent,rgba(var(--theme-accent-rgb),0.07),transparent)]" />
               <div className="relative z-10">
                 <div className="relative inline-flex">
                   <Icon
@@ -47,7 +47,7 @@ export default function WhatIBuildSection() {
                 <h3 className="mt-7.5 mb-[11px] text-lg tracking-[-0.03em]">
                   {title}
                 </h3>
-                <p className="m-0 text-[13px] leading-[1.7] text-zinc-400">
+                <p className="m-0 text-[13px] leading-[1.7] text-zinc-500 data-[theme=light]:text-zinc-800">
                   {copy}
                 </p>
               </div>

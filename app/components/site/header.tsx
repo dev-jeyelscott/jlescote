@@ -1,4 +1,5 @@
 import { container } from "@/app/libs/const";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   return (
@@ -15,14 +16,14 @@ export default function Header() {
         >
           <a
             href="#top"
-            className="inline-flex items-center gap-[7px] font-bold tracking-[-0.05em] [&>span]:text-[17px] [&>i]:size-1.5 [&>i]:rounded-full [&>i]:bg-red-500 [&>i]:shadow-[0_0_12px_rgba(239,68,68,0.7)]"
+            className="inline-flex items-center gap-[7px] font-bold tracking-[-0.05em] [&>span]:text-[17px] [&>i]:size-1.5 [&>i]:rounded-full [&>i]:bg-red-500 [&>i]:shadow-[0_0_12px_rgba(var(--theme-accent-rgb),0.7)]"
             aria-label="John Leward Escote, home"
           >
             <span>JLE</span>
             <i />
           </a>
           <nav
-            className="hidden gap-8 sm:flex [&_a]:text-[13px] [&_a]:text-zinc-400 [&_a]:transition-colors [&_a:hover]:text-white"
+            className="hidden gap-8 sm:flex [&_a]:text-[13px] [&_a]:text-zinc-500 data-[theme=light]:text-zinc-800 [&_a]:transition-colors [&_a:hover]:text-white"
             aria-label="Primary navigation"
           >
             {[
@@ -36,13 +37,16 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <a
-            className="flex items-center gap-2 text-[0px] text-zinc-400 transition-colors hover:text-white sm:text-[13px] [&>i]:size-[7px] [&>i]:rounded-full [&>i]:bg-green-500 [&>i]:shadow-[0_0_0_4px_rgba(34,197,94,0.1)]"
-            href="mailto:jleward.escote17@gmail.com"
-          >
-            <i className="status-pulse" />
-            Open to opportunities
-          </a>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <ThemeToggle />
+            <a
+              className="flex items-center gap-2 text-[0px] text-zinc-500 data-[theme=light]:text-zinc-800 transition-colors hover:text-white sm:text-[13px] [&>i]:size-[7px] [&>i]:rounded-full [&>i]:bg-green-500 [&>i]:shadow-[0_0_0_4px_rgba(34,197,94,0.1)]"
+              href="mailto:jleward.escote17@gmail.com"
+            >
+              <i className="status-pulse" />
+              Open to opportunities
+            </a>
+          </div>
         </div>
       </header>
     </>

@@ -16,7 +16,7 @@ export default function TestimonialSection() {
           {testimonials.map((item) => (
             <article
               key={item.quote}
-              className={`${glassCard} group relative isolate overflow-hidden rounded-xl p-[34px] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_30px_rgba(239,68,68,0.10)]`}
+              className={`${glassCard} group relative isolate overflow-hidden rounded-xl p-[34px] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_30px_rgba(var(--theme-accent-rgb),0.10)]`}
             >
               {/* effects */}
 

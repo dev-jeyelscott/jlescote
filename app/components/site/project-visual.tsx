@@ -7,7 +7,7 @@ export default function ProjectVisual({
 }) {
   return (
     <div
-      className="aspect-video overflow-hidden border-b border-white/[0.08] bg-[radial-gradient(circle_at_80%_10%,rgba(239,68,68,0.13),transparent_40%)] bg-zinc-950 px-[38px] pt-[34px] max-sm:px-4.5 max-sm:pt-5.5"
+      className="aspect-video overflow-hidden border-b border-white/[0.08] bg-[radial-gradient(circle_at_80%_10%,rgba(var(--theme-accent-rgb),0.13),transparent_40%)] bg-zinc-950 px-[38px] pt-[34px] max-sm:px-4.5 max-sm:pt-5.5"
       aria-label={`${title} product preview`}
       role="img"
     >
@@ -34,7 +34,7 @@ export default function ProjectVisual({
             <span />
             <span />
           </div>
-          <div className="mt-[13px] grid grid-cols-3 gap-[7px] [&>i]:h-[38px] [&>i]:border [&>i]:border-white/[0.08] [&>i]:bg-[linear-gradient(145deg,rgba(239,68,68,0.08),transparent)]">
+          <div className="mt-[13px] grid grid-cols-3 gap-[7px] [&>i]:h-[38px] [&>i]:border [&>i]:border-white/[0.08] [&>i]:bg-[linear-gradient(145deg,rgba(var(--theme-accent-rgb),0.08),transparent)]">
             <i />
             <i />
             <i />

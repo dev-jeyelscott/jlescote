@@ -24,7 +24,9 @@ export default function CounterSection() {
             <strong className="mb-[9px] font-mono text-[34px] font-semibold tracking-[-0.05em] max-sm:text-[27px]">
               <Counter end={Number(value)} suffix={String(suffix)} />
             </strong>
-            <span className="text-xs text-zinc-400">{label}</span>
+            <span className="text-xs text-zinc-500 data-[theme=light]:text-zinc-800">
+              {label}
+            </span>
           </div>
         ))}
       </AnimatedGroup>

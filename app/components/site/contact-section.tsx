@@ -9,7 +9,7 @@ import { ArrowDown, GitFork, Mail } from "lucide-react";
 export default function ContactSection() {
   return (
     <section
-      className="border-t border-white/[0.08] bg-[radial-gradient(circle,rgba(239,68,68,0.15),transparent_60%)] py-37.5 text-center max-sm:py-25"
+      className="border-t border-white/[0.08] bg-[radial-gradient(circle,rgba(var(--theme-accent-rgb),0.15),transparent_60%)] py-37.5 text-center max-sm:py-25"
       id="contact"
     >
       <div className={`${container} max-w-[830px]`}>
@@ -25,7 +25,7 @@ export default function ContactSection() {
             Let&apos;s build software that matters.
           </span>
         </h2>
-        <p className="mx-auto max-w-[600px] leading-[1.7] text-zinc-400">
+        <p className="mx-auto max-w-[600px] leading-[1.7] text-zinc-500 data-[theme=light]:text-zinc-800">
           I&apos;m interested in thoughtful products, practical engineering
           challenges, and teams that value dependable delivery.
         </p>

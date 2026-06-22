@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex items-center gap-6 max-sm:grid">
           <a
             href="#top"
-            className="inline-flex items-center gap-[7px] font-bold tracking-[-0.05em] [&>span]:text-[17px] [&>i]:size-1.5 [&>i]:rounded-full [&>i]:bg-red-500 [&>i]:shadow-[0_0_12px_rgba(239,68,68,0.7)]"
+            className="inline-flex items-center gap-[7px] font-bold tracking-[-0.05em] [&>span]:text-[17px] [&>i]:size-1.5 [&>i]:rounded-full [&>i]:bg-red-500 [&>i]:shadow-[0_0_12px_rgba(var(--theme-accent-rgb),0.7)]"
           >
             <span>JLE</span>
             <i />
