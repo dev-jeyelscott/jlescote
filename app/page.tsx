@@ -246,13 +246,13 @@ const skills = [
 ] as const;
 
 const container =
-  "mx-auto w-[min(1200px,calc(100%-48px))] max-sm:w-[min(1200px,calc(100%-32px))]";
+  "mx-auto w-[calc(100%-32px)] max-w-[1200px] sm:w-[calc(100%-48px)]";
 const eyebrowClass =
   "m-0 flex items-center gap-3 font-mono text-[11px] font-medium uppercase leading-[1.4] tracking-[0.13em] text-zinc-300";
 const glassCard =
-  "border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl transition-[transform,border-color,background-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-red-500/35 hover:bg-white/[0.04] hover:shadow-[0_24px_55px_rgba(0,0,0,0.25)]";
+  "flow-border border border-white/[0.08] bg-[#0a0a0b]/92 backdrop-blur-xl transition-[transform,border-color,background-color,box-shadow] duration-300 sm:hover:-translate-y-1 sm:hover:border-red-500/25 sm:hover:bg-[#0d0d0f] sm:hover:shadow-[0_24px_55px_rgba(0,0,0,0.25)]";
 const button =
-  "inline-flex min-h-11.5 items-center justify-center gap-2.5 rounded-[7px] border px-4.5 text-[13px] font-semibold transition-[transform,background-color,border-color] duration-200 hover:scale-[1.03]";
+  "inline-flex min-h-12 items-center justify-center gap-2.5 rounded-[8px] border px-4.5 text-[13px] font-semibold transition-[transform,background-color,border-color] duration-200 active:scale-[0.98] sm:min-h-11.5 sm:hover:scale-[1.03]";
 const primaryButton = `${button} border-red-500 bg-red-500 text-white shadow-[0_12px_30px_rgba(239,68,68,0.15)] hover:bg-red-600`;
 const secondaryButton = `${button} border-white/[0.08] bg-white/[0.025] hover:border-red-500/35 hover:bg-white/[0.06]`;
 const tagList =
@@ -268,13 +268,13 @@ function Heading({
   copy?: string;
 }) {
   return (
-    <div className="mb-[68px] grid grid-cols-[28%_1fr] max-sm:mb-12 max-sm:grid-cols-1 max-sm:gap-6.5">
+    <div className="mb-11 grid grid-cols-1 gap-5 sm:mb-[68px] sm:grid-cols-[28%_1fr] sm:gap-0">
       <p className={eyebrowClass}>
         <span className="h-px w-5.5 bg-red-500" />
         {eyebrow}
       </p>
       <div>
-        <h2 className="m-0 max-w-[760px] text-[clamp(38px,4.4vw,60px)] font-medium leading-[1.03] tracking-[-0.055em] max-sm:text-[39px]">
+        <h2 className="m-0 max-w-[760px] text-[clamp(36px,11vw,44px)] font-medium leading-[1.03] tracking-[-0.055em] sm:text-[clamp(38px,4.4vw,60px)]">
           {title}
         </h2>
         {copy && (
@@ -351,7 +351,7 @@ export default function Home() {
       >
         Skip to content
       </a>
-      <header className="fixed top-0 z-50 w-full border-b border-white/[0.08] bg-black/72 backdrop-blur-[18px]">
+      <header className="flow-line flow-line--slow fixed top-0 z-50 w-full border-b border-white/[0.08] bg-black/80 backdrop-blur-[18px]">
         <div
           className={`${container} flex h-[68px] items-center justify-between`}
         >
@@ -364,7 +364,7 @@ export default function Home() {
             <i />
           </a>
           <nav
-            className="flex gap-8 max-sm:hidden [&_a]:text-[13px] [&_a]:text-zinc-400 [&_a]:transition-colors [&_a:hover]:text-white"
+            className="hidden gap-8 sm:flex [&_a]:text-[13px] [&_a]:text-zinc-400 [&_a]:transition-colors [&_a:hover]:text-white"
             aria-label="Primary navigation"
           >
             {[
@@ -379,10 +379,10 @@ export default function Home() {
             ))}
           </nav>
           <a
-            className="flex items-center gap-2 text-[13px] text-zinc-400 transition-colors hover:text-white max-sm:text-[0px] [&>i]:size-[7px] [&>i]:rounded-full [&>i]:bg-green-500 [&>i]:shadow-[0_0_0_4px_rgba(34,197,94,0.1)]"
+            className="flex items-center gap-2 text-[0px] text-zinc-400 transition-colors hover:text-white sm:text-[13px] [&>i]:size-[7px] [&>i]:rounded-full [&>i]:bg-green-500 [&>i]:shadow-[0_0_0_4px_rgba(34,197,94,0.1)]"
             href="mailto:jleward.escote17@gmail.com"
           >
-            <i />
+            <i className="status-pulse" />
             Open to opportunities
           </a>
         </div>
@@ -398,7 +398,7 @@ export default function Home() {
             aria-hidden="true"
           />
           <div
-            className={`${container} relative grid min-h-[calc(100svh-68px)] grid-cols-[minmax(0,1.13fr)_minmax(430px,0.87fr)] items-center gap-[7vw] py-24 max-lg:grid-cols-1 max-lg:gap-14 max-lg:py-30 max-lg:pb-18 max-sm:py-24 max-sm:pb-[62px]`}
+            className={`${container} relative grid min-h-[calc(100svh-68px)] grid-cols-1 items-center gap-11 py-16 pb-14 lg:grid-cols-[minmax(0,1.13fr)_minmax(430px,0.87fr)] lg:gap-[7vw] lg:py-24`}
           >
             <AnimatedGroup kind="hero">
               <p
@@ -408,7 +408,7 @@ export default function Home() {
                 <i />
                 Philippines · Remote
               </p>
-              <h1 className="my-7 max-w-[760px] text-[clamp(48px,5.5vw,76px)] font-semibold leading-[0.99] tracking-[-0.062em] max-sm:text-[clamp(43px,13vw,62px)] [&>em]:font-normal [&>em]:not-italic [&>em]:text-zinc-400">
+              <h1 className="my-6 max-w-[760px] text-[clamp(42px,13vw,62px)] font-semibold leading-[0.97] tracking-[-0.062em] sm:my-7 sm:text-[clamp(48px,5.5vw,76px)] [&>em]:font-normal [&>em]:not-italic [&>em]:text-zinc-400">
                 Building scalable business systems and{" "}
                 <em>dependable software products.</em>
               </h1>
@@ -417,24 +417,24 @@ export default function Home() {
                 experience building APIs, CRM platforms, e-commerce systems, and
                 developer tools.
               </p>
-              <div className="mt-[34px] flex flex-wrap gap-[11px]">
-                <a className={primaryButton} href="#projects">
+              <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-[11px]">
+                <a className={`${primaryButton} w-full sm:w-auto`} href="#projects">
                   View Projects <ArrowDown size={16} />
                 </a>
                 <a
-                  className={secondaryButton}
+                  className={`${secondaryButton} w-full sm:w-auto`}
                   href="/john-leward-escote-resume.pdf"
                   download
                 >
                   Download Resume
                 </a>
-                <a className={secondaryButton} href="#contact">
+                <a className={`${secondaryButton} w-full sm:w-auto`} href="#contact">
                   Contact Me
                 </a>
               </div>
             </AnimatedGroup>
             <aside
-              className="overflow-hidden rounded-[14px] border border-white/13 bg-[#070709]/93 shadow-[0_35px_100px_rgba(0,0,0,0.55),0_0_70px_rgba(239,68,68,0.06)] backdrop-blur-[18px] max-lg:max-w-[650px]"
+              className="flow-border flow-border--active relative z-0 overflow-hidden rounded-[14px] border border-white/13 bg-[#070709]/93 shadow-[0_28px_80px_rgba(0,0,0,0.5),0_0_50px_rgba(239,68,68,0.06)] backdrop-blur-[18px] lg:max-w-none"
               aria-label="Developer profile code preview"
             >
               <div className="relative flex min-h-10.5 items-center justify-center border-b border-white/[0.08] bg-linear-to-b from-zinc-800 to-[#1c1c1f]">
@@ -543,7 +543,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-32 max-sm:py-22" id="experience">
+        <section className="py-22 sm:py-32" id="experience">
           <div className={container}>
             <Heading
               eyebrow="Experience"
@@ -599,7 +599,7 @@ export default function Home() {
         </section>
 
         <section
-          className="bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08),transparent_70%)] py-32 max-sm:py-22"
+          className="bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08),transparent_70%)] py-22 sm:py-32"
           id="projects"
         >
           <div className={container}>
@@ -693,7 +693,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-32 max-sm:py-22">
+        <section className="py-22 sm:py-32">
           <div className={container}>
             <Heading
               eyebrow="What I build"
@@ -720,7 +720,7 @@ export default function Home() {
         </section>
 
         <section
-          className="border-y border-white/[0.08] bg-[#080808] py-32 max-sm:py-22"
+          className="flow-line flow-line--slow border-y border-white/[0.08] bg-[#080808] py-22 sm:py-32"
           id="skills"
         >
           <div className={container}>
@@ -753,7 +753,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-white/[0.08] py-32 max-sm:py-22">
+        <section className="border-t border-white/[0.08] py-22 sm:py-32">
           <div className={container}>
             <Heading
               eyebrow="Testimonials"
@@ -843,7 +843,27 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-white/[0.08]">
+      <nav
+        aria-label="Mobile navigation"
+        className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-4 rounded-xl border border-white/10 bg-[#09090b]/92 p-1.5 shadow-[0_20px_60px_rgba(0,0,0,0.6),0_0_28px_rgba(239,68,68,0.08)] backdrop-blur-xl sm:hidden"
+      >
+        {[
+          ["Work", "projects"],
+          ["Career", "experience"],
+          ["Skills", "skills"],
+          ["Contact", "contact"],
+        ].map(([label, id]) => (
+          <a
+            className="flex min-h-11 items-center justify-center rounded-lg font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-400 transition-colors active:bg-red-500/12 active:text-white"
+            href={`#${id}`}
+            key={id}
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+
+      <footer className="border-t border-white/[0.08] pb-20 sm:pb-0">
         <div
           className={`${container} flex min-h-31.5 items-center justify-between gap-7.5 max-sm:flex-col max-sm:items-start max-sm:py-7.5`}
         >
