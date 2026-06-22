@@ -61,7 +61,7 @@
   z-index: -1;
 }
 
-.flow-border:hover::before,
+.flow-border::before,
 .flow-border:focus-within::before,
 .flow-border--active::before {
   animation: border-flow 5s linear infinite;
@@ -177,15 +177,124 @@
   );
 }
 
-.glitch-card:hover::before {
+.glitch-card::before {
   opacity: 1;
   animation: glitch-shift 300ms infinite;
 }
 
-.glitch-card:hover::after {
+.glitch-card::after {
   opacity: 1;
 }
 
 .glitch-card {
   animation: glitch-flicker 8s infinite;
+}
+.heading-glow {
+  position: relative;
+  color: #434344;
+}
+
+.heading-glow::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+
+  color: transparent;
+  background-image: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 30%,
+    #ffffff 49%,
+    #ffffff 50%,
+    #ffffff 51%,
+    transparent 58%,
+    transparent 100%
+  );
+
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  background-position: 120% center;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  pointer-events: none;
+
+  animation: heading-light-sweep 6.5s linear infinite;
+}
+
+@keyframes heading-light-sweep {
+  /* Start outside the right */
+  0% {
+    background-position: 120% center;
+  }
+
+  /* Sweep for the first 5 seconds */
+  76.923% {
+    background-position: -120% center;
+  }
+
+  /* Pause for the remaining 1.5 seconds */
+  100% {
+    background-position: -120% center;
+  }
+}
+
+.stats-flow-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.stats-flow-line-top {
+  top: 0;
+}
+
+.stats-flow-line-bottom {
+  bottom: 0;
+}
+
+.stats-flow-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 260px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(239, 68, 68, 0.95),
+    transparent
+  );
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.7);
+}
+
+.stats-flow-line-top::before {
+  animation: stats-flow-rtl 4s linear infinite;
+}
+
+.stats-flow-line-bottom::before {
+  animation: stats-flow-ltr 4s linear infinite;
+}
+
+@keyframes stats-flow-ltr {
+  from {
+    left: -260px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes stats-flow-rtl {
+  from {
+    right: -260px;
+  }
+  to {
+    right: 100%;
+  }
 }

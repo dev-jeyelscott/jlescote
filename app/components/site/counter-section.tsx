@@ -4,12 +4,15 @@ import { AnimatedGroup, Counter } from "@/app/reveal";
 export default function CounterSection() {
   return (
     <section
-      className="border-b border-white/[0.08] bg-[#050505]"
+      className="relative overflow-hidden border-b border-white/[0.08] bg-[#050505]"
       aria-label="Career metrics"
     >
+      <span className="stats-flow-line stats-flow-line-top" />
+      <span className="stats-flow-line stats-flow-line-bottom" />
+
       <AnimatedGroup
         kind="stats"
-        className={`${container} grid grid-cols-4 max-sm:grid-cols-2 [&>div]:flex [&>div]:min-h-35 [&>div]:flex-col [&>div]:justify-center [&>div]:border-r [&>div]:border-white/[0.08] [&>div]:p-7 [&>div:last-child]:border-r-0 max-sm:[&>div]:min-h-28 max-sm:[&>div]:p-5 max-sm:[&>div:nth-child(2)]:border-r-0 max-sm:[&>div:nth-child(-n+2)]:border-b`}
+        className={`${container} relative z-10 grid grid-cols-4 max-sm:grid-cols-2 [&>div]:flex [&>div]:min-h-35 [&>div]:flex-col [&>div]:justify-center [&>div]:border-r [&>div]:border-white/[0.08] [&>div]:p-7 [&>div:last-child]:border-r-0 max-sm:[&>div]:min-h-28 max-sm:[&>div]:p-5 max-sm:[&>div:nth-child(2)]:border-r-0 max-sm:[&>div:nth-child(-n+2)]:border-b`}
       >
         {[
           [6, "+", "Years Experience"],

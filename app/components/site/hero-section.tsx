@@ -57,7 +57,7 @@ export default function HeroSection() {
           </div>
         </AnimatedGroup>
         <aside
-          className="flow-border flow-border--active relative z-0 overflow-hidden rounded-[14px] border border-white/13 bg-[#070709]/93 shadow-[0_28px_80px_rgba(0,0,0,0.5),0_0_50px_rgba(239,68,68,0.06)] backdrop-blur-[18px] lg:max-w-none"
+          className="flow-border flow-border--active relative z-0 overflow-hidden rounded-[14px] border border-white/13 bg-[#070709] shadow-[0_28px_80px_rgba(0,0,0,0.5),0_0_50px_rgba(239,68,68,0.06)] backdrop-blur-[18px] lg:max-w-none"
           aria-label="Developer profile code preview"
         >
           <div className="relative flex min-h-10.5 items-center justify-center border-b border-white/[0.08] bg-linear-to-b from-zinc-800 to-[#1c1c1f]">
