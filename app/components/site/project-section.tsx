@@ -7,10 +7,12 @@ import { AnimatedGroup } from "@/app/reveal";
 import { projects } from "@/app/libs/data";
 import { ArrowUpRight, Check, GitFork } from "lucide-react";
 import ProjectVisual from "./project-visual";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function ProjectSection() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
+    null,
+  );
 
   return (
     <section
