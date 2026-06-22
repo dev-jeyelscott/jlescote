@@ -16,8 +16,11 @@ export default function Heading({
         {eyebrow}
       </p>
       <div>
-        <h2 className="m-0 max-w-[760px] text-[clamp(36px,11vw,44px)] font-medium leading-[1.03] tracking-[-0.055em] sm:text-[clamp(38px,4.4vw,60px)]">
-          {title}
+        <h2
+          className="m-0 max-w-[760px] text-[clamp(36px,11vw,44px)] font-medium leading-[1.03] tracking-[-0.055em] sm:text-[clamp(38px,4.4vw,60px)] "
+          data-text={title}
+        >
+          <span>{title}</span>
         </h2>
         {copy && (
           <p className="mt-5.5 mb-0 max-w-[620px] text-[15px] leading-7 text-zinc-400">

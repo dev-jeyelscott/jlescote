@@ -104,3 +104,88 @@
     opacity: 0.35;
   }
 }
+
+@keyframes glitch-flicker {
+  0%,
+  96%,
+  100% {
+    opacity: 0;
+  }
+  97% {
+    opacity: 0.35;
+  }
+  98% {
+    opacity: 0.15;
+  }
+  99% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes glitch-shift {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 1px);
+  }
+  40% {
+    transform: translate(2px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+}
+
+.glitch-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.glitch-card::before,
+.glitch-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.glitch-card::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(239, 68, 68, 0.15),
+    transparent
+  );
+  mix-blend-mode: screen;
+}
+
+.glitch-card::after {
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(255, 255, 255, 0.025) 3px,
+    transparent 4px
+  );
+}
+
+.glitch-card:hover::before {
+  opacity: 1;
+  animation: glitch-shift 300ms infinite;
+}
+
+.glitch-card:hover::after {
+  opacity: 1;
+}
+
+.glitch-card {
+  animation: glitch-flicker 8s infinite;
+}

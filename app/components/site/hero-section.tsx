@@ -10,7 +10,7 @@ import { ArrowDown } from "lucide-react";
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-svh overflow-hidden border-b border-white/[0.08] bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.15),transparent_50%)] pt-[68px]"
+      className="relative min-h-svh overflow-hidden border-b border-white/[0.08] bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.15),transparent_50%)] pt-[32px]"
       id="top"
     >
       <div
@@ -18,7 +18,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
       <div
-        className={`${container} relative grid min-h-[calc(100svh-68px)] grid-cols-1 items-center gap-11 py-16 pb-14 lg:grid-cols-[minmax(0,1.13fr)_minmax(430px,0.87fr)] lg:gap-[7vw] lg:py-24`}
+        className={`${container} relative grid min-h-[calc(100svh-68px)] grid-cols-1 items-center gap-11 py-2 pb-14 lg:grid-cols-[minmax(0,1.13fr)_minmax(430px,0.87fr)] lg:gap-[7vw] lg:py-4`}
       >
         <AnimatedGroup kind="hero">
           <p
