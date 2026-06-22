@@ -1,11 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import { container, glassCard, tagList } from "@/app/libs/const";
 import Heading from "./heading";
 import { AnimatedGroup } from "@/app/reveal";
 import { projects } from "@/app/libs/data";
 import { ArrowUpRight, Check, GitFork } from "lucide-react";
 import ProjectVisual from "./project-visual";
+import Image from "next/image";
 
 export default function ProjectSection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <section
       className="bg-[radial-gradient(circle_at_center,rgba(var(--theme-accent-rgb),0.08),transparent_70%)] py-10 sm:py-20"
@@ -41,7 +47,41 @@ export default function ProjectSection() {
               <div className="pointer-events-none absolute -top-1/2 left-0 z-0 h-1/2 w-full animate-[scanLine_5s_linear_infinite] bg-[linear-gradient(to_bottom,transparent,rgba(var(--theme-accent-rgb),0.07),transparent)]" />
 
               <div className="relative z-10">
-                <ProjectVisual title={project.title} visual={project.visual} />
+                <div className="relative z-10">
+                  {project.image ? (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImage(project.image!)}
+                      className="relative block h-[260px] w-full overflow-hidden border-b border-white/[0.08] bg-black/40 max-sm:h-[210px]"
+                    >
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} project preview`}
+                        fill
+                        className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        priority={project.number === "01"}
+                      />
+
+                      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,transparent_55%,rgba(0,0,0,0.72))]" />
+
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
+                        <span className="zoom-pill rounded-full px-4 py-2 text-sm backdrop-blur-md">
+                          Click to enlarge
+                        </span>
+                      </div>
+                    </button>
+                  ) : (
+                    <ProjectVisual
+                      title={project.title}
+                      visual={project.visual}
+                    />
+                  )}
+
+                  <div className="p-8 max-sm:px-5 max-sm:py-6">
+                    {/* keep the rest of your existing content here */}
+                  </div>
+                </div>
 
                 <div className="p-8 max-sm:px-5 max-sm:py-6">
                   <div className="flex justify-between font-mono text-[13px] uppercase tracking-[0.1em] text-zinc-500 [&>span:first-child]:text-red-500">
@@ -126,6 +166,32 @@ export default function ProjectSection() {
             </article>
           ))}
         </AnimatedGroup>
+        {selectedImage && (
+          <div
+            className="fixed inset-0 z-[999] flex items-center justify-center bg-black/85 p-6 backdrop-blur-sm"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div
+              className="relative max-h-[90vh] max-w-[90vw]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute -top-12 right-0 text-3xl text-white"
+                onClick={() => setSelectedImage(null)}
+              >
+                ×
+              </button>
+
+              <Image
+                src={selectedImage}
+                alt="Project preview"
+                width={1600}
+                height={900}
+                className="max-h-[90vh] w-auto rounded-xl object-contain shadow-2xl animate-in fade-in zoom-in duration-300 animate-[imageZoom_0.25s_ease]"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

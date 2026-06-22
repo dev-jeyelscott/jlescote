@@ -255,6 +255,15 @@ html[data-theme="light"] [class*="outline-red-"]:focus-visible {
   outline-color: var(--theme-accent-strong) !important;
 }
 
+html[data-theme="light"] .zoom-pill {
+  background: rgba(255, 255, 255, 0.92);
+  color: #18181b;
+  border: 1px solid rgba(24, 24, 27, 0.12);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
 /* Heading glow. */
 html[data-theme="light"] .heading-glow {
   color: #a1a1aa;
@@ -604,6 +613,12 @@ html[data-theme="light"] a > span {
   z-index: 20;
 }
 
+.zoom-pill {
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .stats-flow-line-top {
   top: 0;
 }
@@ -750,5 +765,16 @@ html[data-theme="light"] a > span {
     opacity: 0;
     transform: translate(0);
     clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes imageZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

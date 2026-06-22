@@ -7,6 +7,10 @@ import pikaLogo from "../../public/images/logo/pikapika-logo.png";
 import suySingLogo from "../../public/images/logo/suysing-logo.webp";
 import unilabLogo from "../../public/images/logo/unilab-logo.webp";
 import vivaLogo from "../../public/images/logo/viva-logo.webp";
+import boysOfAdvOverview from "../../public/images/projects/boys-of-adv-overview.png";
+import boilerplateOverview from "../../public/images/projects/boilerplate-overview.png";
+import flowforgeOverview from "../../public/images/projects/flowforge-overview.png";
+import taskManagerOverview from "../../public/images/projects/task-manager-overview.png";
 import {
   Bot,
   Boxes,
@@ -84,68 +88,144 @@ const experience = [
 const projects = [
   {
     number: "01",
-    title: "CRM Call Module",
-    kind: "Business system",
+    image: boilerplateOverview,
+    title: "Freelance Boilerplate",
+    kind: "Personal",
     summary:
-      "A unified communication workspace for customer activity, ownership, and follow-up workflows.",
+      "A production-ready full-stack starter kit designed to accelerate client projects with authentication, role-based access, modular architecture, and reusable business features.",
     problem:
-      "Customer conversations were fragmented across manual processes, limiting visibility and slowing response times.",
+      "Starting every project from scratch led to repetitive setup work, inconsistent architecture, and slower delivery timelines for freelance and client applications.",
     solution:
-      "Designed a centralized CRM module with clear ownership, customer context, permissions, and extensible workflows.",
-    stack: ["Laravel", "React", "PostgreSQL", "REST APIs"],
-    features: [
-      "Authentication",
-      "Role permissions",
-      "Workflow automation",
-      "Notifications",
+      "Built a reusable boilerplate that provides a scalable foundation with authentication, permissions, notifications, and extensible modules, enabling rapid development and consistent project standards.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Clerk",
+      "Tailwind CSS",
     ],
-    visual: "crm",
+    features: [
+      "Authentication & User Management",
+      "Role-Based Access Control (RBAC)",
+      "Admin Dashboard",
+      "Notification System",
+      "File Upload Management",
+      "Reusable CRUD Modules",
+      "API Architecture",
+      "Responsive UI Components",
+    ],
+    visual: "generator",
   },
   {
     number: "02",
+    image: boysOfAdvOverview,
     title: "Boys of ADV",
-    kind: "Community platform",
+    kind: "Community Platform",
     summary:
-      "A mobile-first operating platform for a growing motorcycle community.",
+      "A mobile-first community platform that centralizes membership, events, motorcycle builds, partnerships, and real-time engagement for Honda ADV riders.",
+
     problem:
-      "Membership, events, attendance, and communications needed one reliable home for members and administrators.",
+      "Community operations relied on fragmented communication channels and manual processes, making it difficult to manage memberships, coordinate events, track attendance, and keep members engaged.",
+
     solution:
-      "Built a PWA with member administration, event workflows, partnerships, content, and push notifications.",
-    stack: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle"],
-    features: ["Member portal", "Events", "PWA", "Notifications"],
+      "Built a Progressive Web App that provides a complete digital ecosystem with member administration, event management, QR-based attendance, motorcycle build showcases, partnerships, and push notifications.",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Clerk",
+      "UploadThing",
+      "Web Push",
+      "Tailwind CSS",
+    ],
+
+    features: [
+      "Member Portal & Approval Workflow",
+      "Role-Based Administration",
+      "Motorcycle Build Showcase",
+      "Event Management & QR Check-In",
+      "Geofenced Attendance Tracking",
+      "Push Notifications",
+      "Partner Management",
+      "PWA & Offline Support",
+    ],
+
     visual: "community",
   },
   {
     number: "03",
+    image: flowforgeOverview,
     title: "FlowForge",
-    kind: "Developer platform",
+    kind: "Developer Platform",
+
     summary:
-      "A visual workflow and API builder with an explicit, observable execution model.",
+      "A low-code automation platform for building APIs, workflows, and business processes through a visual orchestration engine.",
+
     problem:
-      "Teams needed to automate business processes without giving up control, observability, or maintainability.",
+      "Building integrations and business automations repeatedly required significant engineering effort, making it difficult to rapidly deliver custom workflows and maintain operational consistency.",
+
     solution:
-      "Created a low-code builder backed by reusable integrations, typed expressions, and deterministic runtime behavior.",
-    stack: ["React", "TypeScript", "Workflow Engine", "PostgreSQL"],
-    features: ["Visual builder", "REST APIs", "Credentials", "Execution logs"],
+      "Created a visual workflow platform that enables developers and technical users to design APIs, orchestrate integrations, execute business logic, and monitor automation flows through a deterministic runtime engine.",
+
+    stack: [
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Node.js",
+      "Workflow Engine",
+      "REST APIs",
+    ],
+
+    features: [
+      "Visual Workflow Builder",
+      "API Builder & Endpoint Management",
+      "Custom Integrations & Connectors",
+      "Credential Management",
+      "Execution Logs & Monitoring",
+      "Triggers & Scheduled Jobs",
+      "Expression & Data Mapping Engine",
+      "Reusable Workflow Components",
+    ],
+
     visual: "workflow",
   },
   {
     number: "04",
-    title: "Boilerplate Generator",
-    kind: "Developer tool",
+    image: taskManagerOverview,
+    title: "Task Manager",
+    kind: "Productivity Platform",
+
     summary:
-      "An opinionated foundation generator for production-minded web products.",
+      "A collaborative task and project management platform designed to help teams plan work, track progress, and stay aligned through visual workflows.",
+
     problem:
-      "Product teams repeatedly spent valuable time rebuilding authentication, architecture, and deployment foundations.",
+      "Small teams and personal projects often rely on scattered spreadsheets and messaging apps, making it difficult to prioritize work, monitor progress, and maintain accountability.",
+
     solution:
-      "Built a modular generator that assembles coherent applications from selected business capabilities.",
-    stack: ["Next.js", "TypeScript", "CLI", "Automation"],
-    features: [
-      "Code generation",
-      "Auth modules",
-      "Validation",
-      "Deployment setup",
+      "Built a Kanban-based project management application with real-time task organization, project collaboration, and workflow tracking to provide a single source of truth for teams.",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Tailwind CSS",
     ],
+
+    features: [
+      "Kanban Boards",
+      "Projects & Workspaces",
+      "Task Management",
+      "Drag-and-Drop Workflow",
+      "Task Prioritization",
+      "Comments & Activity History",
+      "Role-Based Collaboration",
+      "Responsive Dashboard",
+    ],
+
     visual: "generator",
   },
 ];

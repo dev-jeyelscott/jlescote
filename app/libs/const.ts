@@ -9,7 +9,7 @@ const button =
 const primaryButton = `${button} border-red-500 bg-red-500 text-white shadow-[0_12px_30px_rgba(var(--theme-accent-rgb),0.15)] hover:bg-red-600`;
 const secondaryButton = `${button} border-white/[0.08] bg-white/[0.025] hover:border-red-500/35 hover:bg-white/[0.06]`;
 const tagList =
-  "flex flex-wrap gap-[7px] [&>span]:rounded-full [&>span]:border [&>span]:border-white/[0.08] [&>span]:bg-white/[0.025] [&>span]:px-[9px] [&>span]:py-[7px] [&>span]:font-mono [&>span]:text-[13px] [&>span]:text-zinc-300";
+  "flex flex-wrap gap-[7px] [&>span]:rounded-full [&>span]:border [&>span]:border-white/[0.08] [&>span]:bg-white/[0.025] [&>span]:px-[9px] [&>span]:py-[7px] [&>span]:font-mono [&>span]:text-[13px] [&>span]:text-zinc-500";
 
 export {
   container,
