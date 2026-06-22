@@ -7,7 +7,7 @@ import HeroSection from "./components/site/hero-section";
 import MobileNav from "./components/site/mobile-nav";
 import ProjectSection from "./components/site/project-section";
 import SkillSection from "./components/site/skill-section";
-import TestimonialSection from "./components/site/testimonial-section";
+// import TestimonialSection from "./components/site/testimonial-section";
 import TrustedBySection from "./components/site/trusted-by-section";
 import WhatIBuildSection from "./components/site/what-i-build-section";
 
@@ -31,7 +31,7 @@ export default function Home() {
 
         <SkillSection />
 
-        <TestimonialSection />
+        {/* <TestimonialSection /> */}
 
         <ContactSection />
       </main>
