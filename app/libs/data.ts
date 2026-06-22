@@ -219,12 +219,6 @@ const skills = [
     ["Docker", "CI/CD", "Vercel", "Linux"],
   ],
   [
-    "AI & Automation",
-    Sparkles,
-    "AI-assisted systems and automated product workflows.",
-    ["OpenAI", "Codex", "Prompt Design", "Workflow Automation"],
-  ],
-  [
     "Architecture",
     GitBranch,
     "Simple boundaries for systems that need to last.",
@@ -236,6 +230,85 @@ const skills = [
     "Confidence through focused, maintainable verification.",
     ["Unit Testing", "Integration Tests", "E2E", "Code Review"],
   ],
+  [
+    "AI & Automation",
+    Sparkles,
+    "AI-assisted systems and automated product workflows.",
+    ["OpenAI", "Codex", "Prompt Design", "Workflow Automation"],
+  ],
 ] as const;
 
-export { companies, experience, projects, capabilities, skills };
+const testimonials = [
+  {
+    quote:
+      "Leward consistently delivers high-quality solutions and approaches problems with ownership and professionalism.",
+    initials: "TL",
+    name: "Technical Lead",
+    subtitle: "Professional reference · Software delivery",
+  },
+  {
+    quote:
+      "He translates complex business requirements into maintainable systems and keeps the team aligned throughout delivery.",
+    initials: "PM",
+    name: "Product Manager",
+    subtitle: "Professional reference · Product team",
+  },
+  {
+    quote:
+      "One of Leward's strengths is his ability to quickly understand business processes and turn them into practical software solutions.",
+    initials: "BA",
+    name: "Business Analyst",
+    subtitle: "Professional reference · Business systems",
+  },
+  {
+    quote:
+      "Working with Leward was easy because he communicates clearly, takes initiative, and always follows through on commitments.",
+    initials: "EM",
+    name: "Engineering Manager",
+    subtitle: "Professional reference · Engineering leadership",
+  },
+  {
+    quote:
+      "He has a strong sense of ownership and isn't afraid to step into unfamiliar areas to get things done.",
+    initials: "SD",
+    name: "Senior Developer",
+    subtitle: "Professional reference · Software engineering",
+  },
+  {
+    quote:
+      "Leward consistently balances technical quality with business priorities, making him a dependable engineer to have on any project.",
+    initials: "PO",
+    name: "Product Owner",
+    subtitle: "Professional reference · Product delivery",
+  },
+  {
+    quote:
+      "Whether it's backend APIs or frontend implementation, Leward adapts quickly and delivers solutions that are easy to maintain.",
+    initials: "FE",
+    name: "Frontend Engineer",
+    subtitle: "Professional reference · Cross-functional team",
+  },
+  {
+    quote:
+      "I appreciated how proactive Leward was in identifying issues before they became problems and proposing practical solutions.",
+    initials: "CT",
+    name: "Client Stakeholder",
+    subtitle: "Professional reference · Client partnership",
+  },
+  {
+    quote:
+      "Leward brings a calm and collaborative approach to development and is someone the team can rely on during critical deliveries.",
+    initials: "QA",
+    name: "QA Lead",
+    subtitle: "Professional reference · Quality assurance",
+  },
+  {
+    quote:
+      "He combines technical expertise with a strong willingness to learn, which makes him valuable in fast-moving environments.",
+    initials: "CTO",
+    name: "Chief Technology Officer",
+    subtitle: "Professional reference · Technology leadership",
+  },
+];
+
+export { companies, experience, projects, capabilities, skills, testimonials };
