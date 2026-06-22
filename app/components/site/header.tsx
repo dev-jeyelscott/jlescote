@@ -14,14 +14,23 @@ export default function Header() {
         <div
           className={`${container} flex h-[68px] items-center justify-between`}
         >
-          <a
-            href="#top"
-            className="inline-flex items-center gap-[7px] font-bold tracking-[-0.05em] [&>span]:text-[17px] [&>i]:size-1.5 [&>i]:rounded-full [&>i]:bg-red-500 [&>i]:shadow-[0_0_12px_rgba(var(--theme-accent-rgb),0.7)]"
-            aria-label="John Leward Escote, home"
-          >
-            <span>JLE</span>
-            <i />
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="#top"
+              className="inline-flex items-center font-bold tracking-[-0.05em]"
+              aria-label="John Leward Escote, home"
+            >
+              <span className="text-[17px]">JLE</span>
+            </a>
+
+            <a
+              href="mailto:jleward.escote17@gmail.com"
+              className="inline-flex items-center gap-2 text-[11px] sm:text-[13px] text-zinc-500 transition-colors hover:text-white"
+            >
+              <i className="status-pulse size-2 rounded-full bg-green-500 shadow-[0_0_0_4px_rgba(34,197,94,0.1)]" />
+              <span className="inline">Available for Freelance</span>
+            </a>
+          </div>
           <nav
             className="hidden gap-8 sm:flex [&_a]:text-[13px] [&_a]:text-zinc-500 data-[theme=light]:text-zinc-800 [&_a]:transition-colors [&_a:hover]:text-white"
             aria-label="Primary navigation"
