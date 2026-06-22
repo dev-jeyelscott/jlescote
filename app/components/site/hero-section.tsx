@@ -10,7 +10,7 @@ import { ArrowDown } from "lucide-react";
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-svh overflow-hidden border-b border-white/[0.08] bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.15),transparent_50%)] pt-[32px]"
+      className="relative min-h-svh overflow-hidden border-b border-white/[0.08] bg-[radial-gradient(circle_at_top_right,rgba(var(--theme-accent-rgb),0.15),transparent_50%)] pt-[32px]"
       id="top"
     >
       <div

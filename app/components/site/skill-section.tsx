@@ -57,7 +57,7 @@ export default function SkillSection() {
                   {title}
                 </h3>
 
-                <p className="m-0 text-[13px] leading-[1.7] text-zinc-500 data-[theme=light]:text-zinc-800">
+                <p className="m-0 text-[13px] leading-[1.7] text-zinc-500 dark:text-zinc-500 light:text-zinc-700">
                   {copy}
                 </p>
 
@@ -65,7 +65,16 @@ export default function SkillSection() {
                   {items.map((item) => (
                     <span
                       key={item}
-                      className="transition-colors duration-300 group-hover:border-red-500/20"
+                      className="
+                          border border-white/10
+                        bg-white/[0.03]
+                        text-zinc-300
+                          transition-colors duration-300
+                        group-hover:border-red-500/20
+                        data-[theme=light]:border-cyan-600/20
+                        data-[theme=light]:bg-cyan-50
+                        data-[theme=light]:text-zinc-700
+                        "
                     >
                       {item}
                     </span>

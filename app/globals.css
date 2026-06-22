@@ -27,6 +27,9 @@
   --theme-border: rgba(255, 255, 255, 0.08);
   --theme-overlay: rgba(255, 255, 255, 0.04);
   --theme-shadow: rgba(239, 68, 68, 0.16);
+
+  --graph-accent: rgb(153 27 27); /* red-800 */
+  --graph-accent-secondary: rgb(127 29 29); /* red-900 */
 }
 
 html[data-theme="light"] {
@@ -45,6 +48,9 @@ html[data-theme="light"] {
   --theme-border: rgba(9, 9, 11, 0.12);
   --theme-overlay: rgba(9, 9, 11, 0.035);
   --theme-shadow: rgba(8, 145, 178, 0.14);
+
+  --graph-accent: rgb(8 145 178); /* cyan-600 */
+  --graph-accent-secondary: rgb(14 116 144); /* cyan-700 */
 }
 
 html,
@@ -72,6 +78,10 @@ html[data-theme="light"] .theme-icon-dark {
 /* =========================================================
    LIGHT MODE BASE
    ========================================================= */
+html[data-theme="light"] .glass-card {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(8, 145, 178, 0.15);
+}
 
 html[data-theme="light"],
 html[data-theme="light"] body {
@@ -122,9 +132,9 @@ html[data-theme="light"] .bg-zinc-700 {
 }
 
 /* White overlays on dark mode become subtle gray overlays in light mode. */
-html[data-theme="light"] [class*="bg-white/"] {
+/* html[data-theme="light"] [class*="bg-white/"] {
   background-color: var(--theme-overlay) !important;
-}
+} */
 
 /* Cards / panels. */
 html[data-theme="light"] article,

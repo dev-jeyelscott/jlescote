@@ -47,7 +47,7 @@ export default function WhatIBuildSection() {
                 <h3 className="mt-7.5 mb-[11px] text-lg tracking-[-0.03em]">
                   {title}
                 </h3>
-                <p className="m-0 text-[13px] leading-[1.7] text-zinc-500 data-[theme=light]:text-zinc-800">
+                <p className="m-0 text-[13px] leading-[1.7] text-zinc-500 dark:text-zinc-500 light:text-zinc-700">
                   {copy}
                 </p>
               </div>

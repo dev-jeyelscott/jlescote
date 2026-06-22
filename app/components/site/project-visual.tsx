@@ -40,7 +40,30 @@ export default function ProjectVisual({
             <i />
           </div>
           <div
-            className={`mt-[9px] flex h-[72px] items-end gap-[7px] border border-white/[0.08] p-[11px] [&>span]:h-[35%] [&>span]:flex-1 [&>span]:bg-zinc-800 [&>span:nth-child(2)]:h-[65%] [&>span:nth-child(3)]:h-[48%] [&>span:nth-child(3)]:bg-red-900 [&>span:nth-child(4)]:h-[82%] [&>span:nth-child(5)]:h-[60%] ${visual === "community" ? "[&>span:nth-child(4)]:bg-red-800" : ""} ${visual === "workflow" ? "[&>span:nth-child(2)]:bg-red-800" : ""} ${visual === "generator" ? "[&>span:nth-child(5)]:bg-red-800" : ""}`}
+            className={`mt-[9px] flex h-[72px] items-end gap-[7px] border border-white/[0.08] p-[11px]
+  [&>span]:h-[35%]
+  [&>span]:flex-1
+  [&>span]:bg-zinc-800
+  [&>span:nth-child(2)]:h-[65%]
+  [&>span:nth-child(3)]:h-[48%]
+  [&>span:nth-child(3)]:bg-[var(--graph-accent-secondary)]
+  [&>span:nth-child(4)]:h-[82%]
+  [&>span:nth-child(5)]:h-[60%]
+  ${
+    visual === "community"
+      ? "[&>span:nth-child(4)]:bg-[var(--graph-accent)]"
+      : ""
+  }
+  ${
+    visual === "workflow"
+      ? "[&>span:nth-child(2)]:bg-[var(--graph-accent)]"
+      : ""
+  }
+  ${
+    visual === "generator"
+      ? "[&>span:nth-child(5)]:bg-[var(--graph-accent)]"
+      : ""
+  }`}
           >
             <span />
             <span />
