@@ -22,13 +22,18 @@ export default function HeroSection() {
       >
         <AnimatedGroup kind="hero">
           <p
-            className={`${eyebrowClass} normal-case tracking-[0.13em] [&>i]:size-[3px] [&>i]:rounded-full [&>i]:bg-zinc-500`}
+            className={`${eyebrowClass} flex flex-wrap items-center gap-x-3 gap-y-2 normal-case tracking-[0.13em] max-sm:flex-col max-sm:items-start max-sm:gap-1 max-sm:text-[12px] max-sm:leading-[1.45] [&>i]:size-[3px] [&>i]:rounded-full [&>i]:bg-zinc-500 max-sm:[&>i]:hidden`}
           >
-            <span>Senior Laravel &amp; Full-Stack Engineer</span>
+            <span className="max-sm:block">
+              Senior Laravel &amp; Full-Stack Engineer
+            </span>
+
             <i />
-            Philippines · Remote
+
+            <span className="max-sm:block">Philippines · Remote</span>
           </p>
-          <h1 className="my-6 max-w-[760px] text-[clamp(42px,13vw,62px)] font-semibold leading-[0.97] tracking-[-0.062em] sm:my-7 sm:text-[clamp(48px,5.5vw,76px)] [&>em]:font-normal [&>em]:not-italic [&>em]:text-zinc-500 data-[theme=light]:text-zinc-800">
+
+          <h1 className="my-6 max-w-[760px] text-[clamp(40px,12vw,62px)] font-semibold leading-[0.97] tracking-[-0.062em] sm:my-7 sm:text-[clamp(48px,5.5vw,76px)] [&>em]:font-normal [&>em]:not-italic [&>em]:text-zinc-500 data-[theme=light]:text-zinc-800 max-sm:text-[clamp(40px,14vw,54px)]">
             <span
               className="glitch-title"
               data-text="Building scalable business systems and"
@@ -37,15 +42,18 @@ export default function HeroSection() {
             </span>{" "}
             <em>dependable software products.</em>
           </h1>
+
           <p className="m-0 max-w-[650px] text-[17px] leading-[1.75] text-zinc-500 data-[theme=light]:text-zinc-800 max-sm:text-[15px]">
             Senior Laravel &amp; Full-Stack Engineer with 8+ years of experience
             building APIs, CRM platforms, e-commerce systems, and developer
             tools.
           </p>
+
           <div className="mt-8 grid gap-2.5 sm:flex sm:flex-wrap sm:gap-[11px]">
             <a className={`${primaryButton} w-full sm:w-auto`} href="#projects">
               View Projects <ArrowDown size={16} />
             </a>
+
             <a
               className={`${secondaryButton} w-full sm:w-auto`}
               href="/john-leward-escote-resume.pdf"
@@ -53,6 +61,7 @@ export default function HeroSection() {
             >
               Download Resume
             </a>
+
             <a
               className={`${secondaryButton} w-full sm:w-auto`}
               href="#contact"
