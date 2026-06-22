@@ -7,7 +7,7 @@ export default function TrustedBySection() {
   return (
     <section className="border-b border-white/[0.08] py-[54px] pb-18 max-sm:pb-13">
       <div className={container}>
-        <p className="mt-0 mb-7 text-center font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+        <p className="mt-0 mb-7 text-center font-mono text-[13px] uppercase tracking-[0.14em] text-zinc-500">
           Trusted by companies and organizations including
         </p>
         <AnimatedGroup

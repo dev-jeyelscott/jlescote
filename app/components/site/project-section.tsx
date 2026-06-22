@@ -44,7 +44,7 @@ export default function ProjectSection() {
                 <ProjectVisual title={project.title} visual={project.visual} />
 
                 <div className="p-8 max-sm:px-5 max-sm:py-6">
-                  <div className="flex justify-between font-mono text-[10px] uppercase tracking-[0.1em] text-zinc-500 [&>span:first-child]:text-red-500">
+                  <div className="flex justify-between font-mono text-[13px] uppercase tracking-[0.1em] text-zinc-500 [&>span:first-child]:text-red-500">
                     <span>{project.number}</span>
                     <span>{project.kind}</span>
                   </div>
@@ -59,7 +59,7 @@ export default function ProjectSection() {
 
                   <div className="mb-[23px] grid grid-cols-2 gap-5 border-y border-white/[0.08] py-5.5 max-sm:grid-cols-1">
                     <div>
-                      <h4 className="mt-0 mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+                      <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                         Problem
                       </h4>
                       <p className="m-0 text-xs leading-[1.65] text-zinc-400">
@@ -68,7 +68,7 @@ export default function ProjectSection() {
                     </div>
 
                     <div>
-                      <h4 className="mt-0 mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+                      <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                         Solution
                       </h4>
                       <p className="m-0 text-xs leading-[1.65] text-zinc-400">
@@ -77,7 +77,7 @@ export default function ProjectSection() {
                     </div>
                   </div>
 
-                  <h4 className="mt-0 mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+                  <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                     Technologies
                   </h4>
 
@@ -87,7 +87,7 @@ export default function ProjectSection() {
                     ))}
                   </div>
 
-                  <h4 className="mt-0 mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+                  <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                     Key features
                   </h4>
 

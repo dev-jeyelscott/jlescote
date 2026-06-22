@@ -14,11 +14,11 @@ export default function Footer() {
             <span>JLE</span>
             <i />
           </a>
-          <p className="m-0 text-[11px] text-zinc-500">
+          <p className="m-0 text-[14px] text-zinc-500">
             Building dependable software products with practical engineering.
           </p>
         </div>
-        <div className="flex gap-5.5 max-sm:flex-wrap [&>a]:text-[11px] [&>a]:text-zinc-500 [&>a:hover]:text-white">
+        <div className="flex gap-5.5 max-sm:flex-wrap [&>a]:text-[14px] [&>a]:text-zinc-500 [&>a:hover]:text-white">
           <a href="mailto:jleward.escote17@gmail.com">Email</a>
           <a
             href="https://github.com/dev-jeyelscott"

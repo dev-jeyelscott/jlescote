@@ -32,7 +32,7 @@ export default function ExperienceSection() {
               </div>
               {/* Moving scan */}
               <div className="pointer-events-none absolute -top-1/2 left-0 z-0 h-1/2 w-full animate-[scanLine_4s_linear_infinite] bg-[linear-gradient(to_bottom,transparent,rgba(239,68,68,0.08),transparent)]" />
-              <div className="relative z-10 grid size-10.5 place-items-center rounded-[9px] border border-red-500/30 bg-[#140909] font-mono text-[11px] font-bold text-red-200 max-sm:size-9">
+              <div className="relative z-10 grid size-10.5 place-items-center rounded-[9px] border border-red-500/30 bg-[#140909] font-mono text-[14px] font-bold text-red-200 max-sm:size-9">
                 <span className="relative">
                   {job.mark}
                   <span
@@ -50,7 +50,7 @@ export default function ExperienceSection() {
                 </span>
               </div>
               <div className="relative z-10">
-                <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-zinc-500">
+                <span className="font-mono text-[13px] uppercase tracking-[0.1em] text-zinc-500">
                   {job.period}
                 </span>
                 <h3 className="mt-3 mb-[7px] text-[21px] tracking-[-0.03em]">
@@ -62,7 +62,7 @@ export default function ExperienceSection() {
                 <p className="mt-0 mb-5 max-w-[650px] text-sm leading-[1.7] text-zinc-400">
                   {job.summary}
                 </p>
-                <h4 className="mt-0 mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
+                <h4 className="mt-0 mb-3 font-mono text-[13px] font-semibold uppercase tracking-[0.12em] text-zinc-500">
                   Key contributions
                 </h4>
                 <div className="flex flex-wrap gap-x-5 gap-y-[9px]">

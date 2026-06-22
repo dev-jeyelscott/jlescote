@@ -11,7 +11,7 @@ export default function TestimonialSection() {
           title="Trusted to deliver with ownership."
         />
 
-        <div className="grid grid-cols-2 gap-5 max-sm:grid-cols-1 [&_small]:text-[11px] [&_small]:text-zinc-500">
+        <div className="grid grid-cols-2 gap-5 max-sm:grid-cols-1 [&_small]:text-[14px] [&_small]:text-zinc-500">
           <article
             className={`${glassCard} group relative isolate overflow-hidden rounded-xl p-[34px] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_30px_rgba(239,68,68,0.10)]`}
           >
@@ -49,7 +49,7 @@ export default function TestimonialSection() {
               </blockquote>
 
               <div className="flex items-center gap-[13px]">
-                <span className="grid size-10.5 place-items-center rounded-full border border-red-500/25 bg-red-500/8 font-mono text-[11px] font-semibold text-red-200">
+                <span className="grid size-10.5 place-items-center rounded-full border border-red-500/25 bg-red-500/8 font-mono text-[14px] font-semibold text-red-200">
                   TL
                 </span>
 
@@ -98,7 +98,7 @@ export default function TestimonialSection() {
               </blockquote>
 
               <div className="flex items-center gap-[13px]">
-                <span className="grid size-10.5 place-items-center rounded-full border border-red-500/25 bg-red-500/8 font-mono text-[11px] font-semibold text-red-200">
+                <span className="grid size-10.5 place-items-center rounded-full border border-red-500/25 bg-red-500/8 font-mono text-[14px] font-semibold text-red-200">
                   PM
                 </span>
 

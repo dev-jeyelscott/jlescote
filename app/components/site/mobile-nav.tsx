@@ -11,7 +11,7 @@ export default function MobileNav() {
         ["Contact", "contact"],
       ].map(([label, id]) => (
         <a
-          className="flex min-h-11 items-center justify-center rounded-lg font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-400 transition-colors active:bg-red-500/12 active:text-white"
+          className="flex min-h-11 items-center justify-center rounded-lg font-mono text-[13px] uppercase tracking-[0.08em] text-zinc-400 transition-colors active:bg-red-500/12 active:text-white"
           href={`#${id}`}
           key={id}
         >

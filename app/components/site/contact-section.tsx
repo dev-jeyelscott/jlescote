@@ -18,7 +18,12 @@ export default function ContactSection() {
           Start a conversation
         </p>
         <h2 className="mt-7 mb-4.5 text-[clamp(46px,6vw,76px)] leading-[1.02] tracking-[-0.06em] max-sm:text-[44px]">
-          Let&apos;s build software that matters.
+          <span
+            className="glitch-title"
+            data-text="Let's build software that matters."
+          >
+            Let&apos;s build software that matters.
+          </span>
         </h2>
         <p className="mx-auto max-w-[600px] leading-[1.7] text-zinc-400">
           I&apos;m interested in thoughtful products, practical engineering
