@@ -7,8 +7,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "John Leward Escote — Senior Laravel & Full-Stack Engineer",
   description:
     "Senior Laravel and full-stack engineer with 6+ years of experience building APIs, CRM platforms, e-commerce systems, and developer tools.",
@@ -25,6 +27,14 @@ export const metadata: Metadata = {
     title: "John Leward Escote — Senior Laravel & Full-Stack Engineer",
     description:
       "Backend specialist and technical leader building dependable business systems.",
+    images: [
+      {
+        url: "/images/portfolio-preview.png",
+        width: 1448,
+        height: 1086,
+        alt: "John Leward Escote portfolio preview",
+      },
+    ],
     type: "website",
     locale: "en_US",
   },
@@ -33,6 +43,12 @@ export const metadata: Metadata = {
     title: "John Leward Escote — Senior Laravel & Full-Stack Engineer",
     description:
       "Backend specialist and technical leader building dependable business systems.",
+    images: [
+      {
+        url: "/images/portfolio-preview.png",
+        alt: "John Leward Escote portfolio preview",
+      },
+    ],
   },
 };
 
