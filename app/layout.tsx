@@ -55,9 +55,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth scroll-pt-[76px] motion-reduce:scroll-auto`}
     >
       <head>
+        <link
+          href="/images/dark-mode-favicon.ico"
+          id="theme-favicon"
+          rel="icon"
+          sizes="any"
+        />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("portfolio-theme");if(t!=="light"&&t!=="dark")t="dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){document.documentElement.dataset.theme="dark"}})()`,
+            __html: `(function(){var d="/images/dark-mode-favicon.ico";var l="/images/light-mode-favicon.ico";function f(t){var e=document.getElementById("theme-favicon");if(e)e.href=t==="light"?l:d}try{var t=localStorage.getItem("portfolio-theme");if(t!=="light"&&t!=="dark")t="dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;f(t)}catch(e){document.documentElement.dataset.theme="dark";f("dark")}})()`,
           }}
         />
       </head>

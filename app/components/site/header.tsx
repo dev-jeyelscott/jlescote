@@ -1,4 +1,5 @@
 import { container } from "@/app/libs/const";
+import Image from "next/image";
 import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
@@ -17,10 +18,29 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <a
               href="#top"
-              className="inline-flex items-center font-bold tracking-[-0.05em]"
+              className="group inline-grid size-11 shrink-0 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-[border-color,background-color,transform] hover:border-red-500/35 hover:bg-white/[0.06] active:scale-95 sm:size-12"
               aria-label="John Leward Escote, home"
             >
-              <span className="text-[17px]">JLE</span>
+              <span className="relative block size-9 sm:size-10">
+                <Image
+                  alt=""
+                  aria-hidden="true"
+                  className="theme-logo-dark block size-full object-contain"
+                  height={1024}
+                  priority
+                  src="/images/dark-mode-logo.png"
+                  width={1024}
+                />
+                <Image
+                  alt=""
+                  aria-hidden="true"
+                  className="theme-logo-light absolute inset-0 hidden size-full object-contain"
+                  height={1024}
+                  priority
+                  src="/images/light-mode-logo.png"
+                  width={1024}
+                />
+              </span>
             </a>
 
             <a

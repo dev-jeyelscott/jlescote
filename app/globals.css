@@ -67,6 +67,19 @@ body {
   display: none;
 }
 
+.theme-logo-dark,
+.theme-logo-light {
+  transition: opacity 200ms ease;
+}
+
+html[data-theme="light"] .theme-logo-dark {
+  display: none;
+}
+
+html[data-theme="light"] .theme-logo-light {
+  display: block;
+}
+
 html[data-theme="light"] .theme-icon-light {
   display: block;
 }

@@ -3,6 +3,18 @@
 import { Moon, Sun } from "lucide-react";
 
 const STORAGE_KEY = "portfolio-theme";
+const FAVICONS = {
+  dark: "/images/dark-mode-favicon.ico",
+  light: "/images/light-mode-favicon.ico",
+} as const;
+
+function updateFavicon(theme: keyof typeof FAVICONS) {
+  const favicon = document.getElementById("theme-favicon");
+
+  if (favicon instanceof HTMLLinkElement) {
+    favicon.href = FAVICONS[theme];
+  }
+}
 
 export default function ThemeToggle() {
   function toggleTheme() {
@@ -11,6 +23,7 @@ export default function ThemeToggle() {
 
     root.dataset.theme = nextTheme;
     root.style.colorScheme = nextTheme;
+    updateFavicon(nextTheme);
 
     try {
       localStorage.setItem(STORAGE_KEY, nextTheme);
